@@ -10,12 +10,12 @@
   <body>
     <div class="container">
       <h1 class="head">Guess My Number!</h1>
-      <p class="between">Guess a number between 1 - 100</p>
+      <p class="between">Guess a number between <span class="start">1</span>  - <span class="end">100</span> </p>
       <p class="outputext">Enter a number below</p>
-      <p class="heart">You have a 5 heart</p>
+      <p class="heart">You have a <span class="heart-number">20</span> heart</p>
       <input type="number" id="input" placeholder="Enter a Number" />
       <button class="btn" id="enter">Enter</button>
-      <button class="btn" id="restart">Restart</button>
+      <button class="btn" id="restart" style="display: none;" onclick="window.location.reload()">Restart</button>
     </div>
 
     <script src="./app.js"></script>
