@@ -26,12 +26,14 @@ const guessGame = function () {
         heart.style.fontSize = "2.5rem";
         input.style.display = "none";
         between.style.display = "none";
+        win.play();
       } else if (guess > random) {
         output.innerHTML = "Your guess is too high";
         end.innerText = guess;
         life--;
         heartNumber.innerText = life;
         input.value = "";
+        up.play();
         
       } else if (guess < random) {
         output.innerHTML = "Your guess is too low";
@@ -39,13 +41,14 @@ const guessGame = function () {
         life--;
         heartNumber.innerText = life;
         input.value = "";
+        up.play();
       }
     }
   } else {
     output.innerHTML = "You have no more hearts ⛔";
     output.style.color = "red";
     //   output.style.fontSize = "2rem";
-    enter.disabled = true;
+    enter.style.display = "none";
     restart.style.display = "inline-block";
     document.querySelector("body").style.backgroundColor = "red";
     heart.style.display = "none";
@@ -53,6 +56,7 @@ const guessGame = function () {
     between.innerHTML = "GAME OVER";
     between.style.fontSize = "3rem";
     between.style.color = "red";
+    over.play();
   }
   
 };
