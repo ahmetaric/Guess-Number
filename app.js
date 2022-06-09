@@ -7,7 +7,7 @@ const heart = document.querySelector(".heart");
 const between = document.querySelector(".between");
 const heartNumber = document.querySelector(".heart-number");
 const random = Math.floor(Math.random() * 100 + 1);
-let life = 10;
+let life = 7;
 
 const guessGame = function () {
   if (life > 1) {
